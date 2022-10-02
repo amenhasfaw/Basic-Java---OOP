@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Date;
 import java.awt.*;
 
@@ -69,10 +70,84 @@ public class Main{
         System.out.println(name);
         String location = "C:\\Users\\hp\\Desktop\\CODE\\Basic Java - OOP"; // Escaping the BACKSLASH
         System.out.println(location);
-        String multiLines = "FIRST LINE \nSECOND LINE";
+        String multiLines = "FIRST LINE \nSECOND LINE\n\n";// New line Escape Sequence
         System.out.println(multiLines);
 
+        //ARRAYS
 
-    
+        int[] numbers = new int[5]; //Old way of intitalizing arrays
+        numbers[0] = 1;
+        numbers[1] = 2;
+        System.out.println(numbers); // This gives out the address of the Array.
+        System.out.println(Arrays.toString(numbers)); // this gives out the Array elements.
+
+                // Arrays have a fixed number of elements
+
+        int[] numbers2 = {2,6,4,1,9}; // initializing Arrays for known elements
+        System.out.println(Arrays.toString(numbers2));
+        Arrays.sort(numbers2);
+        System.out.println(Arrays.toString(numbers2) + "\n");
+
+        // Two dimensional Array
+
+        int[][] twoDimensional = new int[3][3]; //Intializing Multi-dimensional arrays
+        twoDimensional[0][0] = 1;
+        twoDimensional[1][1] = 1;
+        twoDimensional[2][2] = 1;
+        System.out.println(Arrays.toString(twoDimensional)); //use of TOSTRING method won't work
+        System.out.println(Arrays.deepToString(twoDimensional)); //use DEEPTOSTRING method to show elements
+
+        int[][] multiDim = {{1,2,3},{4,5,6}}; // intializing with known elements   
+        System.out.println(Arrays.deepToString(multiDim) + "\n");
+        
+        // CONSTANTS
+
+       final float PI = 3.14F; // we need this to be a CONSTANT so we add FINAL infront
+       System.out.println(PI + " : PI is a constant!! \n");
+
+       // Arithimetic in JAVA
+
+        int p = 10;
+        int o = 5;
+        System.out.println("Basic Arthimetic for 10 & 5: ");
+        System.out.println(p+o);
+        System.out.println(p-o);
+        System.out.println(p*o);
+        System.out.println(p/o);
+        System.out.println(p%o);
+
+        System.out.println("Variables should be the SAME TYPE...");
+
+        o++; //increment
+        p--; //decrement
+        
+        System.out.println(o + " Increased by one");
+        System.out.println(p + " Decreased by one");
+
+        System.out.println("Operation order is BODMAS \n");
+
+        //TYPE CASTING
+          //Implicit Casting is under the hood
+
+        short e = 1;
+        int r = e + 2;
+        System.out.println(r + " : Implicitly type casted");
+            // Emplicit Casting
+
+        double d = 3.9;
+        int q = (int)d + 2;
+        System.out.println(q + " : Explicitly type casted");
+        System.out.println("Casting progression: byte > short > int > long > float");
+        System.out.println("We use parsing methods for non-compatible types");
+        String parsed = "3";
+        int parsing = Integer.parseInt(parsed);
+        System.out.println(parsing + " : This is parsed into Integer");
+
+
+
+    }
+
+    private static char[] typeOf(int parsing) {
+        return null;
     }
 }
