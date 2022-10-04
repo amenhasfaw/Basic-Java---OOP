@@ -2,6 +2,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Scanner;
 
+import javax.lang.model.util.ElementScanner14;
+
 import org.xml.sax.InputSource;
 
 import java.awt.*;
@@ -263,7 +265,21 @@ public class Main{
 
 
         System.out.println("\n\n      FIZZ BUZZ CHALLENGE");
+        
+       
 
+        System.out.print("Input a number: ");
+        Scanner fizz = new Scanner(System.in);
+        int buzz = fizz.nextInt();
+
+        if(buzz % 15 == 0 && buzz % 3 == 0)
+            System.out.println("FizzBuzz");
+        else if(buzz % 5 == 0 )
+            System.out.println("Fizz");
+        else if(buzz % 3 == 0)
+            System.out.println("Buzz");
+        else 
+           System.out.println(buzz);
         
         
          
