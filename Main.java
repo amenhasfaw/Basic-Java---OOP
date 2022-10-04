@@ -197,8 +197,75 @@ public class Main{
         
         String mortgageResult = NumberFormat.getCurrencyInstance().format(result);
 
-        System.out.println("\n\n ** YOUR MORTGAGE IS: " + mortgageResult + " **");
-    
+        System.out.println("\n\n ** YOUR MORTGAGE IS: " + mortgageResult + " **\n\n");
+
+
+        System.out.println("Comparison Operators\n");
+
+        int firstNum = 10;
+        int secondNum = 10;
+        System.out.println(firstNum == secondNum); // this will return true
+        secondNum = 20;
+        System.out.println(firstNum == secondNum); // this will return false
+        System.out.println("\n");
+
+        System.out.println("Logical Operators\n");
+
+
+         int temperature = 9;
+         boolean isCold = temperature < 10 && temperature > 0;
+         System.out.println(isCold);
+
+         // && = and
+         // || = or
+         // !X = not X
+
+        System.out.println("If statement\n");
+        
+        System.out.print("Input income: ");
+        Scanner income = new Scanner(System.in);
+        int wage = income.nextInt();
+
+        if(wage >= 400000)
+            System.out.println("You're in the TOP 1%");
+        else if(wage >= 100000)
+            System.out.println("You're well off");
+        else if(wage >= 50000)
+            System.out.println("You're stuck in Middle Class");
+        else 
+          System.out.println("Work Harder Bro \n");
+
+
+        String earning = wage >= 1000000 ? "You can retire" : "You can't retire" ;
+        System.out.println(earning);
+
+
+        System.out.println("\n\n SWITCH STATEMENT");
+
+        System.out.println("\n Input education level: Diploma/Undergraduate/Graduate ");
+        Scanner level = new Scanner(System.in);
+        String educationLevel = level.nextLine();
+
+        switch(educationLevel){
+            case "Diploma" :
+             System.out.println("You don't qualify");
+             break;
+            case "Undergraduate":
+                System.out.println("You Qualify");
+                break;
+            case "Graduate":
+                System.out.println("You Qualify");
+                break;
+            default:
+                System.out.println("WRONG INPUT");
+                break;
+            }
+
+
+        System.out.println("\n\n      FIZZ BUZZ CHALLENGE");
+
+        
+        
          
 
 
@@ -207,9 +274,5 @@ public class Main{
 
 
 
-    }
-
-    private static char[] typeOf(int parsing) {
-        return null;
     }
 }
