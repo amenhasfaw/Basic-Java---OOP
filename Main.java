@@ -1,6 +1,11 @@
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
+
+import org.xml.sax.InputSource;
+
 import java.awt.*;
+import java.text.NumberFormat;
 
 //  Basics
 
@@ -141,7 +146,64 @@ public class Main{
         System.out.println("We use parsing methods for non-compatible types");
         String parsed = "3";
         int parsing = Integer.parseInt(parsed);
-        System.out.println(parsing + " : This is parsed into Integer");
+        System.out.println(parsing + " : This is parsed into Integer \n\n");
+
+        //MATHS CLASS
+
+        System.out.println(Math.round(PI) + " Rounded down PI.");
+        System.out.println(Math.ceil(PI) + " Rounded to the Ceiling of PI.");
+        System.out.println(Math.floor(PI) + " Rounded to the Floor of PI.");
+        System.out.println(Math.max(4,7) + " :Maximum of 4 and 7");
+        System.out.println(Math.random() + " :Random number from 0 to 1");
+        System.out.println((int)(Math.random() * 100) + " : Random Number b/n 0 and 100 by Casting");
+        System.out.println(Math.round(Math.random() * 100) + " : Random Number b/n 0 and 100 by Maths Rounding\n\n");
+
+        //Formating Numbers
+
+            //NumberFormat is an ABTRACT and cann't create an instance using NEW
+        
+        System.out.println("Converting to Currency Format");
+        String dollar = NumberFormat.getCurrencyInstance().format(1982830.82);
+        System.out.println(dollar);
+
+        System.out.println("Converting to Percentage");
+        String percent = NumberFormat.getPercentInstance().format(0.25);
+        System.out.println(percent + "\n\n");
+
+        // Accepting INPUTS
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("RETIREMENT CALCULATOR:\nHow old are you? ");
+        int old = scanner.nextInt();
+        System.out.println("You will retire after " + (65 - old) + " years.\n\n");
+
+
+
+
+        System.out.println("       MORGAGE CALCULATOR \n");
+
+        Scanner mortgage = new Scanner(System.in);
+        System.out.print("Input loan amount: ");
+        int amount = mortgage.nextInt();
+        System.out.print("Input duration in years: ");
+        int time = mortgage.nextInt();
+        System.out.print("Input annual interest rate: ");
+        float rate = mortgage.nextFloat();
+        rate = (rate/100)/12;
+        int payments = time*12;
+        double formula1 = rate*(Math.pow((1+rate),payments));
+        double formula2 = (Math.pow((1+rate),payments)) - 1 ;
+        double result = amount*(formula1/formula2);
+        
+        String mortgageResult = NumberFormat.getCurrencyInstance().format(result);
+
+        System.out.println("\n\n ** YOUR MORTGAGE IS: " + mortgageResult + " **");
+    
+         
+
+
+
+
 
 
 
