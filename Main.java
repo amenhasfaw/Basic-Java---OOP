@@ -281,10 +281,37 @@ public class Main{
         else 
            System.out.println(buzz);
         
+        // For loops
+
+        System.out.println("\n    Loops");
+        for(int i=0;i<5;i++){
+            System.out.println("This is for loop  " + (i+1) + "\n");
+        }
+
+        int j = 0;
+        while(j < 5){
+            j++;
+            System.out.println("This is while loop ");
+        }
+
+        System.out.println("\n\n");
+
+        //  While Loops
+        Scanner loop = new Scanner(System.in);
+        String exit = "";
+
+        while(!exit.equals("yes")){
+            System.out.print("Do you want to Exit?");
+            exit = loop.nextLine().toLowerCase();
+            System.out.println(exit);
+        }
+
+        // Break and continue
+          //Continue moves control to the begining
+          //Break stops the loops
         
-         
-
-
+        
+        
 
 
 
