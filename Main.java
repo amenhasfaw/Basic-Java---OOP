@@ -1,11 +1,6 @@
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Scanner;
-
-import javax.lang.model.util.ElementScanner14;
-
-import org.xml.sax.InputSource;
-
 import java.awt.*;
 import java.text.NumberFormat;
 
@@ -309,13 +304,5 @@ public class Main{
         // Break and continue
           //Continue moves control to the begining
           //Break stops the loops
-        
-        
-        
-
-
-
-
-
     }
 }
