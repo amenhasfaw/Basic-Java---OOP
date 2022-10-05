@@ -1,5 +1,7 @@
-# Basics of Java
+# **Basics of Java**
 ---
-### Follow along Mosh Hamedani 
+## Resources
 
-[YouTube Link](https://www.youtube.com/watch?v=eIrMbAQSU34)
+### Java Tutorial for Beginners by Mosh Hamedani : [Link](https://www.youtube.com/watch?v=eIrMbAQSU34)
+
+### w3schools : [Link](https://www.w3schools.com/java/java_methods.asp)
